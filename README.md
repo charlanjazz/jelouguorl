@@ -1,5 +1,5 @@
 # jelouguorl
 es de prueba
 ###############
-modificado por el pinche carlos
+modificado por carlos
 ###############
