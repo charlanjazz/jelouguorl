@@ -1,13 +1,2 @@
-# jelouguorl
-es de prueba
-###############
-modificado por carlos
-###############
-Que mal plan por eliminar mi linea de codigo
-###############
-modificado por el otro carlos
-###############
-
-###############
-modificado por el otro carlos
-###############
+Curso para aprender a programar mediante el lenguaje de programación
+llamado python

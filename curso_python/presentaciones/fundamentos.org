@@ -1,0 +1,24 @@
+FUNDAMENTOS EN PYTHON #-*- mode: org -*-
+#+STARTUP: showall
+* ¿Qué es PYTHON?
+Python es una lenguaje de programación de proposito general.
+** ¿Qué es un lenguaje de programación?
+* Sintaxis  
+** Cómo ejecutar un programa de python
+*** Cómo ejecutar un programa de python
+    
+*** Cómo ejecutar un programa desde el interprete
+
+*** Primeros ejercicios
+    1) Escribir un programa el cual encuentre todos los numeros 
+       divisibles entre 7 pero, que no son divisibles entre 5
+       entre 2000 y 3200.
+       #+BEGIN_SRC python
+       for i in range(2000,3200):
+           if (i%5!=0) and (i%7==0):
+               print i
+       #+END_SRC 
+    2) 
+* Semantica
+* El interprete de python
+
