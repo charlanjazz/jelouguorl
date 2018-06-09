@@ -1,0 +1,36 @@
+LECTURA_DE_CODIGO -*-mode-*-
+
+* Lectura de código
+** ¿Qué imprimen los siguientes códigos?
+   1. 
+       #+BEGIN_SRC python
+       nums = {1,2,3,4,5,6}
+       nums = {0,1,2,3} & nums
+       nums = filter(lambda x: x>1, nums)
+       print(len(list(nums)))
+       #+END_SRC
+   2. 
+      #+BEGIN_SRC python
+      def power(x,y):
+          if y == 0:
+              return 1
+          else:
+              return x * power(x,y-1)
+      print(power(2,3))    
+      #+END_SRC
+   3. 
+      #+BEGIN_SRC python
+      a = (lambda x: x*(x+1))(6)
+      print(a)
+      #+END_SRC
+   4. 
+      #+BEGIN_SRC python
+      res = list(filter(lambda x: x%2 == 0, nums))
+      print(res)
+      #+END_SRC
+
+* Soluciones
+  1. 2
+  2. 8
+  3. 42
+  4. [2, 8]
