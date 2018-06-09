@@ -1,24 +1,63 @@
 FUNDAMENTOS EN PYTHON #-*- mode: org -*-
 #+STARTUP: showall
 * ¿Qué es PYTHON?
-Python es una lenguaje de programación de proposito general.
+  Python es un *lenguaje de programación* de proposito general orientado a objetos con caracteristicas 
+  de otros paradigmas de programación tales como imperativo y funcional.
 ** ¿Qué es un lenguaje de programación?
-* Sintaxis  
-** Cómo ejecutar un programa de python
-*** Cómo ejecutar un programa de python
-    
-*** Cómo ejecutar un programa desde el interprete
-
-*** Primeros ejercicios
-    1) Escribir un programa el cual encuentre todos los numeros 
-       divisibles entre 7 pero, que no son divisibles entre 5
-       entre 2000 y 3200.
-       #+BEGIN_SRC python
-       for i in range(2000,3200):
-           if (i%5!=0) and (i%7==0):
-               print i
-       #+END_SRC 
-    2) 
-* Semantica
+   Un lenguaje de programacion es un programa en el que se puede abstraer todo aquello que sea
+   susceptible de ser un algortimo y para tal tarea los lenguajes de programación se componen
+   esencialmente de dos conceptos; sintaxis, la cual especifica como debe ser escrito un programa
+   en el lenguaje (ojo: puede estar bien escrito un programa y aun asi no ejecutarse de una manera correcta)
+   y semantica, que es lo que le da sentido a lo que escribimos en la sintaxis del lenguaje.
 * El interprete de python
+  El interprete de python es el encargado de ejecutar las instrucciones o los programas que les pasemos ya sea escribiendolos directamente 
+  en el interprete o cargandolos desde un archivo que tendra la extension .py 
+* Sintaxis de python
+  La sintaxis de python es famosa por ser clara a diferencia de otros lenguajes ademas de que
+  se pueden omitir los tipos de datos primitivos y otros a la hora de declarar vaiables o funciones
+** Tipos primitivos
+   Pese a que se puede ejecutar codigo sin la necesidad de especificar los tipos de datos con los que se trabaja
+   python infiere el tipo de dato con el que se trabaja y para consultar el tipo de dato con el que se trabaja
+   python tiene una funcion que determina el tipo: type(). Entre los parentensis ira la variable u objeto del que queremos 
+   saber tipo. Ejemplo:
 
+   #+BEGIN_SRC python
+   misterio = "mistery"
+   type(misterio)
+   #+END_SRC
+
+   ejecutado en una terminal tiene el siguiente aspecto:
+   >>> misterio = "mistery"
+   >>> type(misterio)
+   <type 'str'>
+   >>>
+
+   Con esto se demuestra que python trabaja con tipos pero, no nos exige ponerlos explicitamente ya que en su motor los determina,
+   esto nos da ventaja de escribir rapido nuestros programas pero, hagamos un breve repaso de los tipos primitivos que python 
+   maneja de manera nativa.
+   + int
+   + float
+   + string
+
+** Comparaciones
+** Control de flujo
+** Funciones    
+** TDA
+* Semantica de python
+* Cómo ejecutar un programa de python
+** Cómo ejecutar un programa de python
+   
+** Cómo ejecutar un programa desde el interprete
+   
+** Primeros ejercicios
+   1) Escribir un programa el cual encuentre todos los numeros 
+      divisibles entre 7 pero, que no son divisibles entre 5
+      entre 2000 y 3200.
+      #+BEGIN_SRC python
+      for i in range(2000,3200):
+          if (i%5!=0) and (i%7==0):
+              print i
+      #+END_SRC 
+   2) 
+
+      
