@@ -9,6 +9,7 @@ FUNDAMENTOS EN PYTHON #-*- mode: org -*-
    esencialmente de dos conceptos; sintaxis, la cual especifica como debe ser escrito un programa
    en el lenguaje (ojo: puede estar bien escrito un programa y aun asi no ejecutarse de una manera correcta)
    y semantica, que es lo que le da sentido a lo que escribimos en la sintaxis del lenguaje.
+** El zen de python
 * El interprete de python
   El interprete de python es el encargado de ejecutar las instrucciones o los programas que les pasemos ya sea escribiendolos directamente 
   en el interprete o cargandolos desde un archivo que tendra la extension .py 
@@ -27,11 +28,12 @@ FUNDAMENTOS EN PYTHON #-*- mode: org -*-
    #+END_SRC
 
    ejecutado en una terminal tiene el siguiente aspecto:
+   #+BEGIN_SRC shell
    >>> misterio = "mistery"
    >>> type(misterio)
    <type 'str'>
    >>>
-
+   #+END_SRC
    Con esto se demuestra que python trabaja con tipos pero, no nos exige ponerlos explicitamente ya que en su motor los determina,
    esto nos da ventaja de escribir rapido nuestros programas pero, hagamos un breve repaso de los tipos primitivos que python 
    maneja de manera nativa.
