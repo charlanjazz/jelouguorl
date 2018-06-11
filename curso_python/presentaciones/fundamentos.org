@@ -80,10 +80,7 @@ FUNDAMENTOS EN PYTHON #-*- mode: org -*-
    | >          | mayor que       | 5 > 5           |
    | <=         | menor igual que | 5 <= 5          |
    | >=         | mayor igual que | 5 >= 5          |
-   
-*** Control de flujo
-*** Funciones    
-*** TDA
+
 ** Estructuras de control
    Las estructuras de control nos ayudan a no repetir lo que ya hemos
    escrito o dicho de otra manera nos ayuda a automatizar tareas que
