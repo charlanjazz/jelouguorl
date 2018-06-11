@@ -1,65 +1,156 @@
 FUNDAMENTOS EN PYTHON #-*- mode: org -*-
 #+STARTUP: showall
 * ¿Qué es PYTHON?
-  Python es un *lenguaje de programación* de proposito general orientado a objetos con caracteristicas 
-  de otros paradigmas de programación tales como imperativo y funcional.
+  Python es un *lenguaje de programación* de proposito general orientado
+  a objetos con caracteristicas de otros paradigmas de programación
+  tales como imperativo y funcional.
 ** ¿Qué es un lenguaje de programación?
-   Un lenguaje de programacion es un programa en el que se puede abstraer todo aquello que sea
-   susceptible de ser un algortimo y para tal tarea los lenguajes de programación se componen
-   esencialmente de dos conceptos; sintaxis, la cual especifica como debe ser escrito un programa
-   en el lenguaje (ojo: puede estar bien escrito un programa y aun asi no ejecutarse de una manera correcta)
-   y semantica, que es lo que le da sentido a lo que escribimos en la sintaxis del lenguaje.
+   Un lenguaje de programacion es un programa en el que se puede 
+   abstraer todo aquello que sea susceptible de ser un algortimo y 
+   para tal tarea los lenguajes de programación se componen
+   esencialmente de dos conceptos; sintaxis, la cual especifica como 
+   debe ser escrito un programa en el lenguaje (ojo: puede estar bien
+   escrito un programa y aun asi no ejecutarse de una manera correcta)
+   y semantica, que es lo que le da sentido a lo que escribimos en la
+   sintaxis del lenguaje.
 ** El zen de python
-* El interprete de python
-  El interprete de python es el encargado de ejecutar las instrucciones o los programas que les pasemos ya sea escribiendolos directamente 
-  en el interprete o cargandolos desde un archivo que tendra la extension .py 
 * Sintaxis de python
-  La sintaxis de python es famosa por ser clara a diferencia de otros lenguajes ademas de que
-  se pueden omitir los tipos de datos primitivos y otros a la hora de declarar vaiables o funciones
+  La sintaxis de python es famosa por ser clara a diferencia de otros
+  lenguajes ademas de que se pueden omitir los tipos de datos
+  primitivos y otros a la hora de declarar vaiables o funciones. El 
+  detalle con python esta en que las secciones de codigo que 
+  pertenecen a funciones o estructuras de control se identificaran por
+  una indentacion de 4 espacios. Veremos a detalle este concepto en los
+  primero ejercicios.
 ** Tipos primitivos
-   Pese a que se puede ejecutar codigo sin la necesidad de especificar los tipos de datos con los que se trabaja
-   python infiere el tipo de dato con el que se trabaja y para consultar el tipo de dato con el que se trabaja
-   python tiene una funcion que determina el tipo: type(). Entre los parentensis ira la variable u objeto del que queremos 
-   saber tipo. Ejemplo:
-
+   Pese a que se puede ejecutar codigo sin la necesidad de especificar
+   los tipos de datos con los que se trabaja ya que python infiere el
+   tipo de dato con el que se trabaja y para consultar el tipo de dato
+   con el que se trabaja python tiene una funcion que determina el
+   tipo:type(). entre los parentensis ira la variable u objeto del que
+   queremos saber tipo. Ejemplo:
+  
    #+BEGIN_SRC python
    misterio = "mistery"
    type(misterio)
    #+END_SRC
 
    ejecutado en una terminal tiene el siguiente aspecto:
+
    #+BEGIN_SRC shell
    >>> misterio = "mistery"
    >>> type(misterio)
    <type 'str'>
    >>>
    #+END_SRC
-   Con esto se demuestra que python trabaja con tipos pero, no nos exige ponerlos explicitamente ya que en su motor los determina,
-   esto nos da ventaja de escribir rapido nuestros programas pero, hagamos un breve repaso de los tipos primitivos que python 
-   maneja de manera nativa.
-   + int
-   + float
-   + string
 
-** Comparaciones
-** Control de flujo
-** Funciones    
-** TDA
-* Semantica de python
-* Cómo ejecutar un programa de python
+   Con esto se demuestra que python infiera los tipos con los que se
+   trabaja aunque no aparexcan explicitamente ya que en su motor los 
+   determina, esto nos da ventaja de escribir mas rapido nuestros 
+   programas pero, hagamos un breve repaso de los tipos primitivos que
+   python maneja de manera nativa.
+
+   | Tipos de datos primitivos | Representacion en PYTHON |
+   |---------------------------+--------------------------|
+   | enteros                   | int                      |
+   | enteros largos            | long                     |
+   | punto flotante            | float                    |
+   | complejos                 | j                        |
+   | cadenas                   | str                      |
+   | boolean                   | True , False             |
+     
+** Operadores aritmeticos y de relacion
+   Los operadores aritmeticos son importantes en cualquier lenguaje de
+   programacion junto con los de relacion que siempre devolveran una 
+   respuesta del tipo boolean.
+   
+   | Operadores | Descripcion     | Ejemplos de uso |
+   |------------+-----------------+-----------------|
+   | +          | suma            | r = 3+5         |
+   | -          | resta           | r = 3+5         |
+   | *          | multiplicaion   | r = 3*6         |
+   | **         | exponente       | r = 2**2        |
+   | /          | division        | r = 2/2         |
+   | //         | divisionentera  | r = 3 // 2      |
+   | %          | modulo          | r = 2%2         |
+   |------------+-----------------+-----------------|
+   | ==         | igualdad        | 5 == 5          |
+   | !=         | diferencia      | 5 != 5          |
+   | <          | menor que       | 5 < 5           |
+   | >          | mayor que       | 5 > 5           |
+   | <=         | menor igual que | 5 <= 5          |
+   | >=         | mayor igual que | 5 >= 5          |
+   
+*** Control de flujo
+*** Funciones    
+*** TDA
+** Estructuras de control
+   Las estructuras de control nos ayudan a no repetir lo que ya hemos
+   escrito o dicho de otra manera nos ayuda a automatizar tareas que
+   ya hemos programado asi como a definir los casos en que esto se 
+   realizara. Aqui ahondaremos en el concepto de indentacion
+*** Sentencias if
+    Se utiliza para validar si un bloque de codigo se ejecutara o no
+    la sintaxixs es la siguiente:
+
+    #+BEGIN_SRC python
+    if expresion:
+        sentencias
+    #+END_SRC
+    
+    Notemos que "sentencias" esta a 4 espacios en blanco y esto dice 
+    o se lee como todo lo que este declarado abajo del if a 4 espacios
+    sera el bloque de codigo que ejecutara el if si la "expresion" 
+    resulta ser True. 
+    En lenguajes como Java o C los bloques de codigo se identifican 
+    por ir entre llaves:
+    Ejemplo en Java
+
+    #+BEGIN_SRC java
+    if(expresion){
+    sentencias
+    }
+    #+END_SRC
+
+** Funciones y modulos 
+   La sintaxis para funciones en python es: 
+   #+BEGIN_SRC python
+   def mi_funcion():
+   #+END_SRC
+
+   en donde "mi_funcion" sera el nombre que elijamos para nuestra 
+   funcion y entre parentesis iran los parametros que necesitemos.
+   Como detalle a considerar es que apartir de 
+** Estructuras de datos
+   Las estructuras de datos son una herramienta muy util que nos
+   brindan los lenguajes de programación para modelar. Python nos 
+   ofrece las siguietes para trabajar
+
+   | Estructura   | Representacion en python |
+   |--------------+--------------------------|
+   | Conjuntos    | set = {}                 |
+   | Listas       | l = []                   |
+   | Tuplas       | t = algo, otro, algo     |
+   | Diccionarios | d = {:}                  |
+
+* El interprete de python
+  El interprete de python es el encargado de ejecutar las 
+  instrucciones o los programas que les pasemos ya sea escribiendolos 
+  directamente en el interprete o cargandolos desde un archivo que
+  tendra la extension .py 
 ** Cómo ejecutar un programa de python
+*** Cómo ejecutar un programa de python
+*** Cómo ejecutar un programa desde el interprete
    
-** Cómo ejecutar un programa desde el interprete
-   
-** Primeros ejercicios
-   1) Escribir un programa el cual encuentre todos los numeros 
-      divisibles entre 7 pero, que no son divisibles entre 5
-      entre 2000 y 3200.
-      #+BEGIN_SRC python
-      for i in range(2000,3200):
-          if (i%5!=0) and (i%7==0):
-              print i
-      #+END_SRC 
-   2) 
+* Primeros ejercicios
+  1) Escribir un programa el cual encuentre todos los numeros 
+     divisibles entre 7 pero, que no son divisibles entre 5
+     entre 2000 y 3200.
+     #+BEGIN_SRC python
+     for i in range(2000,3200):
+         if (i%5!=0) and (i%7==0):
+             print i
+     #+END_SRC 
+  2) 
 
       
