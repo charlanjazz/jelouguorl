@@ -24,18 +24,18 @@ FUNDAMENTOS EN PYTHON #-*- mode: org -*-
   primero ejercicios.
 ** Tipos primitivos
    Pese a que se puede ejecutar codigo sin la necesidad de especificar
-   los tipos de datos con los que se trabaja ya que python infiere el
-   tipo de dato con el que se trabaja y para consultar el tipo de dato
-   con el que se trabaja python tiene una funcion que determina el
-   tipo:type(). entre los parentensis ira la variable u objeto del que
-   queremos saber tipo. Ejemplo:
+   los tipos de datos con los que se trabaja, ya que python infiere el
+   tipo de dato y para consultar el tipo de dato con el que se trabaja
+   python tiene una funcion que determina el tipo : type() 
+   entre los parentensis ira la variable u objeto del que queremos
+   saber tipo, ejemplo:
   
    #+BEGIN_SRC python
    misterio = "mistery"
    type(misterio)
    #+END_SRC
 
-   ejecutado en una terminal tiene el siguiente aspecto:
+   ejecutado en el interprete de python tiene el siguiente aspecto:
 
    #+BEGIN_SRC shell
    >>> misterio = "mistery"
@@ -44,8 +44,8 @@ FUNDAMENTOS EN PYTHON #-*- mode: org -*-
    >>>
    #+END_SRC
 
-   Con esto se demuestra que python infiera los tipos con los que se
-   trabaja aunque no aparexcan explicitamente ya que en su motor los 
+   Con esto se demuestra que python infiere los tipos con los que se
+   trabaja aunque no aparezcan explicitamente ya que en su motor los 
    determina, esto nos da ventaja de escribir mas rapido nuestros 
    programas pero, hagamos un breve repaso de los tipos primitivos que
    python maneja de manera nativa.
@@ -88,14 +88,14 @@ FUNDAMENTOS EN PYTHON #-*- mode: org -*-
    realizara. Aqui ahondaremos en el concepto de indentacion
 *** Sentencias if
     Se utiliza para validar si un bloque de codigo se ejecutara o no
-    la sintaxixs es la siguiente:
+    la sintaxis es la siguiente:
 
-    #+BEGIN_SRC python
+    #+BEGIN_SRC pytho
     if expresion:
-        sentencias
+        exp
     #+END_SRC
     
-    Notemos que "sentencias" esta a 4 espacios en blanco y esto dice 
+    Notemos que "exp" esta a 4 espacios en blanco y esto dice 
     o se lee como todo lo que este declarado abajo del if a 4 espacios
     sera el bloque de codigo que ejecutara el if si la "expresion" 
     resulta ser True. 
@@ -105,12 +105,158 @@ FUNDAMENTOS EN PYTHON #-*- mode: org -*-
 
     #+BEGIN_SRC java
     if(expresion){
-    sentencias
+    exp
     }
     #+END_SRC
+*** Sentencias else y elif
+    Siempre van despues de de la sentencia if y se ocupan para hacer 
+    algo con los casos que no se aceptan en la sentencia if, ejemplo:
 
+    #+BEGIN_SRC python
+    if expresion:
+        exp1
+    elif expresion:
+        exp2
+    else:
+        exp3
+    #+END_SRC
+
+    se pueden anidar las sentencias if asi como las sentencias elif
+    sin embargo no es lo mismo con las sentencias else ya que 
+    representa cualquier otro caso.
+*** Bucles while
+    A diferencia de las sentencias if, elif y else la sentencias while
+    repite las instrucciones indentadas mientras se mantenga la 
+    condicion como cierta, una vez que la evalue a False saldra del 
+    bucle, ejemplo:
+    #+BEGIN_SRC python
+    i = 0
+    while(i < 10):
+        print(i)
+        i = i + 1
+    #+END_SRC
+    
+    ¿Que imprime el siguiente codigo
+    #+BEGIN_SRC python
+    while 10 == 10:
+        print(".i.")
+    #+END_SRC
+*** Sentencia break    
+    Para finalizar un bucle while prematuramente, se puede usar la 
+    sentencia break para interrumpir el bucle dado el caso. Siendo asi
+    ¿Que imprime el siguiente codigo?
+
+    #+BEGIN_SRC python
+    i = 0
+    while 10 == 10:
+        print(i)
+        i = i + 1
+        if i == 11:
+            break
+    #+END_SRC
+        
+    #+BEGIN_SRC shell
+    >>> i = 0
+    >>> while(True):
+    ...     print(".i.")
+    ...     i = i + 1
+    ...     if i == 11:
+    ...         break
+    ... 
+    .i.
+    .i.
+    .i.
+    .i.
+    .i.
+    .i.
+    .i.
+    .i.
+    .i.
+    .i.
+    .i.
+    >>> 
+    #+END_SRC
+*** Bucles for        
+    Los bucles for funcionan unicamente con objetos iterables.
+    Yo intente iterar sobre un entero (tipo int) y me arrojo el
+    siguiente mensaje:
+    
+    #+BEGIN_SRC shell
+    >>> for i in 10:
+    ...     print i 
+    ... 
+    Traceback (most recent call last):
+    File "<stdin>", line 1, in <module>
+    TypeError: 'int' object is not iterable
+    #+END_SRC
+    
+    Ahora bien python cuenta con una funcion muy util llamada range()
+    la cual recibe 1 o 2 parametros enteros y devuelve una lista; si 
+    solo recibe un parametro la lista comenzara con el 0 y terminara
+    en un numero antes del parametro, ejemplo:
+    #+BEGIN_SRC shell
+    >>> for i in range(10):
+    ...     print i 
+    ... 
+    0
+    1
+    2
+    3
+    4
+    5
+    6
+    7
+    8
+    9
+    >>> 
+    #+END_SRC
+
+    con dos parametros se veria como sigue:
+
+    #+BEGIN_SRC shell
+    >>> for i in range(2,10):
+    ...     print i 
+    ... 
+    2
+    3
+    4
+    5
+    6
+    7
+    8
+    9
+    >>> 
+    #+END_SRC
+    
+    Para conocer que mas cosas puede hacer por nosotros la funcion
+    range python cuenta con una funcion muy util que utilizaremos 
+    constantemente llamada help() y entre los parentesis ira la 
+    funcion sobre la que deseamos saber mas que en nuestro caso es 
+    range()... en la terminal se ve como sigue:
+
+    #+BEGIN_SRC shell
+    >>> help(range)
+    Help on built-in function range in module __builtin__:
+
+    range(...)
+    range(stop) -> list of integers
+    range(start, stop[, step]) -> list of integers
+    
+    Return a list containing an arithmetic progression of integers.
+    range(i, j) returns [i, i+1, i+2, ..., j-1]; start (!) defaults to 0.
+    When step is given, it specifies the increment (or decrement).
+    For example, range(4) returns [0, 1, 2, 3].  The end point is omitted!
+    These are exactly the valid indices for a list of 4 elements.
+
+>>> 
+    #+END_SRC
+    
+    ¿Puedes dar un ejemplo de la tercera opcion de range que tiene 3 
+    parametros?...
 ** Funciones y modulos 
+
    La sintaxis para funciones en python es: 
+
    #+BEGIN_SRC python
    def mi_funcion():
    #+END_SRC
