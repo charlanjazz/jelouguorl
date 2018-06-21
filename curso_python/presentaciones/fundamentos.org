@@ -1,7 +1,5 @@
 #+STARTUP: showall
-#+TITLE: 
 #+AUTHOR: Jose Carlos Buenrostro Rueda
-
 * ¿Qué es PYTHON?
   Python es un *lenguaje de programación* de proposito general orientado
   a objetos con caracteristicas de otros paradigmas de programación
@@ -298,6 +296,67 @@
     
     ¿Puedes dar un ejemplo de la tercera opcion de range que tiene 3 
     parametros?...
+*** Sentencias else
+**** La sentencia else es comunmente usada a lo largo de una sentencia if
+
+     pero, también pueden seguir un sentencia for o while que les da un sentido
+     diferente.
+     
+     Con el loop for o while, el código dentro de la funcion es llamado si 
+     termina normal, es decir, cuando una sentencia break no interrumpe el loop,
+     ejemplo:
+
+     #+BEGIN_SRC python
+     for i in range(10):
+         if i == 99:
+             break
+         else:
+             print("Unbroken loop 1")
+     #+END_SRC
+
+     #+BEGIN_SRC python
+     for i in range(10):
+         if i == 5:
+             break
+         else:
+             print("Unbroken loop 2")
+     #+END_SRC
+
+     Salida:
+
+     #+BEGIN_SRC bash
+     >>> 
+     Unbroken loop 1
+     >>> 
+     #+END_SRC
+**** También pueden ser usados en las sentencias try/except.
+     En este caso se ejecuta si no ocurre algún error en la sentencia try,
+     ejemplo:
+     
+    #+BEGIN_SRC python
+    try:
+        print(1)
+    except ZeroDivisionError:
+        print(2)
+    else:
+        print(3)
+
+    try:
+        print(1/0)
+    except ZeroDivisionError:
+        print(4)
+    else:
+        print(5)    
+    #+END_SRC
+    Dando como resultado :
+    
+    #+BEGIN_SRC bash
+    >>> 
+    1
+    2
+    3
+    >>> 
+    #+END_SRC
 ** Funciones y modulos 
 
    La sintaxis para funciones en python es: 
@@ -328,8 +387,7 @@
   tendra la extension .py 
 ** Cómo ejecutar un programa de python
 *** Cómo ejecutar un programa de python
-*** Cómo ejecutar un programa desde el interprete
-   
+*** Cómo ejecutar un programa desde el interprete   
 * Primeros ejercicios
   1) Escribir un programa el cual encuentre todos los numeros 
      divisibles entre 7 pero, que no son divisibles entre 5
