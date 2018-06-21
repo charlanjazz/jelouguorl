@@ -1,5 +1,7 @@
-FUNDAMENTOS EN PYTHON #-*- mode: org -*-
 #+STARTUP: showall
+#+TITLE: 
+#+AUTHOR: Jose Carlos Buenrostro Rueda
+
 * ¿Qué es PYTHON?
   Python es un *lenguaje de programación* de proposito general orientado
   a objetos con caracteristicas de otros paradigmas de programación
@@ -14,6 +16,49 @@ FUNDAMENTOS EN PYTHON #-*- mode: org -*-
    y semantica, que es lo que le da sentido a lo que escribimos en la
    sintaxis del lenguaje.
 ** El zen de python
+   
+   Es una manera de programar en donde el objetivo es que tu programa haga
+   lo que debe de hacer y que sea claro en el sentido en el que sea facil de
+   entender esto quiza también ahorre mucho tiempo en la documentacion 
+   y asi nuestro programa sera mas facil de leer por lo que sera mas facil 
+   aumentarlo o darle mantenimiento.
+
+   Una forma de llegar a este objetivo es seguir el zen de python que se puede
+   consultar desde el interprete de python ejecutando la siguiente instruccion:
+
+   #+BEGIN_SRC bash
+   >>> import this
+   #+END_SRC
+
+   Nos arrojara el siguiente texto:
+
+   #+BEGIN_SRC bash
+   The Zen of Python, by Tim Peters
+
+   Beautiful is better than ugly.
+   Explicit is better than implicit.
+   Simple is better than complex.
+   Complex is better than complicated.
+   Flat is better than nested.
+   Sparse is better than dense.
+   Readability counts.
+   Special cases aren't special enough to break the rules.
+   Although practicality beats purity.
+   Errors should never pass silently.
+   Unless explicitly silenced.
+   In the face of ambiguity, refuse the temptation to guess.
+   There should be one-- and preferably only one --obvious way to do it.
+   Although that way may not be obvious at first unless you're Dutch.
+   Now is better than never.
+   Although never is often better than *right* now.
+   If the implementation is hard to explain, it's a bad idea.
+   If the implementation is easy to explain, it may be a good idea.
+   Namespaces are one honking great idea -- let's do more of those!
+   >>> 
+
+   En donde podemos apreciar una lista de reglas que se tienen que tener en 
+   consideracion cada vez que estemos trabjando en python
+   #+END_SRC
 * Sintaxis de python
   La sintaxis de python es famosa por ser clara a diferencia de otros
   lenguajes ademas de que se pueden omitir los tipos de datos
