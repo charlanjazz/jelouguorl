@@ -57,7 +57,7 @@
    >>> 
 
    En donde podemos apreciar una lista de reglas que se tienen que tener en 
-   consideracion cada vez que estemos trabjando en python
+   consideracion cada vez que estemos trabjando en python.
    #+END_SRC
 * Sintaxis de python
   La sintaxis de python es famosa por ser clara a diferencia de otros
