@@ -1,5 +1,8 @@
 #+STARTUP: showall
+#+TITLE: Fundamentos de programacion mediante el lenguaje PYTHON
 #+AUTHOR: Jose Carlos Buenrostro Rueda
+#+EMAIL: jcbrueda@ciencias.unam.mx
+
 * ¿Qué es PYTHON?
   Python es un *lenguaje de programación* de proposito general orientado
   a objetos con caracteristicas de otros paradigmas de programación
@@ -387,7 +390,51 @@
   tendra la extension .py 
 ** Cómo ejecutar un programa de python
 *** Cómo ejecutar un programa de python
+    
+    Lo primero sera ubicarnos desde la terminal en el directorio en donde
+    tengamos nuestro archivo a ejecutar y escribimos lo siguiente, pensando que
+    nuestro archivo se llama: prueba.py...
+
+    #+BEGIN_SRC bash
+    $ python prueba.py     
+    #+END_SRC
+
+    en el caso de python 3.X
+
+    #+BEGIN_SRC bash
+      $ python3 prueba.py
+    #+END_SRC
+
+    Para hacer que nuestros scripts los ejecute python3 tendremos que agregar
+    como primer linea a nuetro archivo lo siguiente:
+
+    #+BEGIN_SRC PYTHON
+    #!/usr/bin/python3
+    #+END_SRC
+
+    Esto es: ejecuta este archivo con este programa que se encuentra en esta
+    carpeta, en nuestro caso python 3.X
+
 *** Cómo ejecutar un programa desde el interprete   
+    
+    Es frecuente y útil querer modificar o incrementar el codigo en nuestros
+    scripts y la manera anterior de ejecuar nuestros scripts es algo infeciente
+    en el caso en se requiera ejecutar continuamente el script y una manera para
+    hacer mas eficiente esta tarea es la de recargar un archivo o leerlo sin
+    tener que salir del interprete y es la siguiente
+
+    en python 2.7:
+
+    #+BEGIN_SRC bash
+    >>> execfile("prueba.py")        
+    #+END_SRC
+
+    en python 3:X:
+
+    #+BEGIN_SRC bash
+    >>> exec(open("prueba.py").read())        
+    #+END_SRC
+
 * Primeros ejercicios
   1) Escribir un programa el cual encuentre todos los numeros 
      divisibles entre 7 pero, que no son divisibles entre 5
